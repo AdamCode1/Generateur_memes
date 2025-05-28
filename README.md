@@ -1,0 +1,1 @@
+Meme Generator is a lightweight web app that allows users to create custom memes quickly and easily. With a clean and minimal interface, users can upload an image, add top and bottom text, and instantly preview and download their meme.
