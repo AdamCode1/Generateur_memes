@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <div class="conteneur">
+    <h1>Générateur de Mèmes</h1>
+
+    <div class="section-creation">
+      <input type="file" id="chargementImage" name="imageUpload" accept="image/*">
+      <label for="chargementImage" class="bouton-personnalise">Choisir une photo</label>
+      <div class="controls">
+        <input type="text" id="texteHaut" placeholder="Texte du haut" oninput="mettreAJourApercu()">
+        <input type="text" id="texteBas" placeholder="Texte du bas" oninput="mettreAJourApercu()">
+      </div>
+
+      <div class="zone-apercu" id="zoneApercu">
+        <img id="imageApercu" alt="Aperçu du mème">
+        <div id="divTexteHaut" class="texte-meme texte-haut"></div>
+        <div id="divTexteBas" class="texte-meme texte-bas"></div>
+      </div>
+
+      <div class="controls">
+        <button onclick="genererMeme()">Générer Mème</button>
+        <button id="boutonTelecharger" onclick="telechargerMeme()">Télécharger</button>
+        <button id="boutonPartager" onclick="partagerMeme()">Partager</button>
+      </div>
+    </div>
+
+    <h2>Galerie</h2>
+    <div class="galerie" id="galerieImages">
+    </div>
+  </div>
+
+  <div class="overlay" id="monOverlay" onclick="fermerMenuPartage()"></div>
+
+
+
+
+
+  <div class="menu-partage" id="menuPartage">
+    <h3>Partager sur</h3>
+    <div class="options-partage">
+      <div class="option-partage" onclick="partagerSur('facebook')">
+        Facebook
+      </div>
+      <div class="option-partage" onclick="partagerSur('instagram')">
+        Instagram
+      </div>
+      <div class="option-partage" onclick="partagerSur('whatsapp')">
+        WhatsApp
+      </div>
+    </div>
+    <button onclick="fermerMenuPartage()">Annuler</button>
+  </div>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
